@@ -1,0 +1,21 @@
+module.exports={
+	exhibitor: require('../controllers/exhibitor/exhibitor'),
+	invites: require('../controllers/exhibitor/invites'),
+	visitor: require('../controllers/visitor/visitor'),
+	visitor_tracker: require('../controllers/visitor/visitor_tracker'),
+	stall: require('../controllers/stall/stall'),
+	appointments : require('../controllers/common/appointments'),
+	keylocations : require('../controllers/common/keylocations'),
+	visitor_fav : require('../controllers/visitor/visitor_fav'),
+	emergency_contacts : require('../controllers/common/emergencycontacts'),
+	appointmentTimeSlots : require('../controllers/common/appointmentTimeSlots'),
+	elecaramaTv :require('../controllers/common/elecaramaTv'),
+	contact : require('../controllers/common/usercontacts'),
+	halls : require('../controllers/common/halls'),
+	ticket : require('../controllers/ticket/ticket'),
+	ticketcategory : require('../controllers/ticket/ticketcategory'),
+	aboutus : require('../controllers/common/aboutus'),
+	social : require('../controllers/common/social'),
+	stallvisited: require('../controllers/visitor/stallvisited'),
+	usernotification: require('../controllers/common/userNotifications')
+};

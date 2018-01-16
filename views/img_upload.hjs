@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <h1>Image uploader</h1>
+    
+    <form id="frmUploader" enctype="multipart/form-data" action="http://localhost:3000/api/about-us" method="post">
+        <input type="file" name="Banner_image" />
+        <input type="text" name="Title" />
+        <input type="submit" name="submit" id="btnSubmit" value="Upload" />
+    </form>	
+  </body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Electrama REST API Documentation</title>
+  <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="/stylesheets/api-doc-generator.min.css">
+</head>
+<body>
+  <main>
+    <nav class="navigation">
+      <section class="container">
+        <div class="row">
+          <div class="column">
+            <div class="title">Electrama REST API Documentation</div>
+          </div>
+        </div>
+      </section>
+    </nav>
+
+    <section class="container">
+      <div class="row">
+        <div class="column">
+          <div class="sections">
+            <ul>
+              <li>
+                <a href="#Exhibitor">Exhibitor</a>
+              </li>
+              <li>
+                <a href="#Stall">Stall</a>
+              </li>
+              <li>
+                <a href="#Visitor">Visitor</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="row">
+        <div class="column">
+          <div class="section">
+            <div class="section-header">
+              <div class="section-title">
+                <a name="Exhibitor" class="section-toggle">Exhibitor</a>
+              </div>
+
+              <div class="actions">
+                <a class="section-toggle">Show/hide</a>
+                <a class="hide-description">List Operations</a>
+                <a class="show-description">Expand Operations</a>
+              </div>
+            </div>
+
+            <div class="endpoints">
+              <div class="endpoint post">
+                <div class="address toggle-description">
+                  <span class="label">post</span><span class="url">/api/exhibitor/login</span>
+                </div>
+
+                <div class="description hidden">
+                  <p>Login Exhibitor</p>
+
+                  <table>
+                    <thead>
+                    <tr>
+                      <th>Parameter</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>email</td>
+                      <td>string</td>
+                      <td>true</td>
+                    </tr>
+                    <tr>
+                      <td>password</td>
+                      <td>string</td>
+                      <td>true</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <div class="row">
+        <div class="column">
+          <div class="section">
+            <div class="section-header">
+              <div class="section-title">
+                <a name="Stall" class="section-toggle">Stall</a>
+              </div>
+
+              <div class="actions">
+                <a class="section-toggle">Show/hide</a>
+                <a class="hide-description">List Operations</a>
+                <a class="show-description">Expand Operations</a>
+              </div>
+            </div>
+
+            <div class="endpoints">
+              <div class="endpoint post">
+                <div class="address toggle-description">
+                  <span class="label">post</span><span class="url">/api/stall/register</span>
+                </div>
+
+                <div class="description hidden">
+                  <p>Register a new Stall</p>
+
+                  <table>
+                    <thead>
+                    <tr>
+                      <th>Parameter</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>stall_name</td>
+                      <td>string</td>
+                      <td>true</td>
+                    </tr>
+                    <tr>
+                      <td>lat</td>
+                      <td>string</td>
+                      <td>true</td>
+                    </tr>
+                    <tr>
+                      <td>lng</td>
+                      <td>string</td>
+                      <td>true</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <div class="row">
+        <div class="column">
+          <div class="section">
+            <div class="section-header">
+              <div class="section-title">
+                <a name="Visitor" class="section-toggle">Visitor</a>
+              </div>
+
+              <div class="actions">
+                <a class="section-toggle">Show/hide</a>
+                <a class="hide-description">List Operations</a>
+                <a class="show-description">Expand Operations</a>
+              </div>
+            </div>
+
+            <div class="endpoints">
+              <div class="endpoint post">
+                <div class="address toggle-description">
+                  <span class="label">post</span><span class="url">/api/visitor/register</span>
+                </div>
+
+                <div class="description hidden">
+                  <p>Create a new visitor</p>
+
+                  <table>
+                    <thead>
+                    <tr>
+                      <th>Parameter</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>salutation</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>first_name</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>middle_name</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>last_name</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>organisation</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>designation</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>address-&gt;address1</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>address-&gt;address2</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>address-&gt;address3</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>address-&gt;country</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>address-&gt;state</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>address-&gt;city</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>address-&gt;zipcode</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>email</td>
+                      <td>string</td>
+                      <td>true</td>
+                    </tr>
+                    <tr>
+                      <td>secondary_email</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>telephone</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>fax</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>mobile_number</td>
+                      <td>string</td>
+                      <td>true</td>
+                    </tr>
+                    <tr>
+                      <td>linkedin_url</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>fb_url</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>twitter_url</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>nature_of_organisation</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>nature_of_business</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>turnover</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>area_of_interest</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>is_hear</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>is_visited</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>required_support</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>register_for_update</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>password</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>device_token</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    <tr>
+                      <td>qr_code</td>
+                      <td>string</td>
+                      <td>false</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="endpoint post">
+                <div class="address toggle-description">
+                  <span class="label">post</span><span class="url">/api/visitor/login</span>
+                </div>
+
+                <div class="description hidden">
+                  <p>Login visitor</p>
+
+                  <table>
+                    <thead>
+                    <tr>
+                      <th>Parameter</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>email</td>
+                      <td>string</td>
+                      <td>true</td>
+                    </tr>
+                    <tr>
+                      <td>password</td>
+                      <td>string</td>
+                      <td>true</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script type="text/javascript" src="/javascripts/api-doc-generator.min.js"></script>
+</body>
+</html>

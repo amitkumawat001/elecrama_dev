@@ -1,0 +1,53 @@
+var mongoose = require('mongoose');
+var Constants = require('../../Config/constants');
+var Visitor = new mongoose.Schema({
+    salutation: {type:String, default:''},
+    first_name: {type:String, default:''},
+    middle_name: {type:String, default:''},
+    last_name: {type:String, default:''},
+    organisation:{type:String, default:''},
+    designation:{type:String, default:''},
+    address:{
+        address1:String,
+        address2:String,
+        address3:String,
+        country:String,
+        state:String,
+        city:String,
+        zipcode:String,
+    },
+    email:{type:String, unique:true, required:true},
+    secondary_email:{type:String, default:''},
+    telephone:{type:String, default:''},
+    fax:{type:String, default:''},
+    mobile_number:{type:String, unique:true, required:true},
+    USER_TYPE : {type:String, enum : [Constants.USER_TYPES.VISITOR, Constants.USER_TYPES.HALL_MANAGER, Constants.USER_TYPES.HALL_DIRECTOR, Constants.USER_TYPES.VENDOR, Constants.USER_TYPES.ADMIN, Constants.USER_TYPES.SPEAKER] },
+    linkedin_url:{type:String, default:''},
+    fb_url:{type:String, default:''},
+    twitter_url:{type:String, default:''},
+    nature_of_organisation:[{type:String, default:''}],
+    nature_of_business:[{type:String, default:''}],
+    turnover:{type:String, default:''},
+    area_of_interest:[String],
+    is_hear:{type:String, default:''},
+    source:{type:String, default:''},
+    is_visited:{type:String, default:''},
+    required_support:{type:String, default:''},
+    register_for_update:String,
+    password:{type:String, default:''},
+    device_token:{type:String, default:''},
+    qr_image : {type:String, default:''},
+    access_token : {type:String, default:''},
+    device : {type:String, default:''},
+    os_type : {type:String, default:''},
+    device_id :  {type:String, default:''},
+    openfire_gid : {type:String, default:''},
+    openfire_password : {type:String, default:''},
+    profile_pic : {type:String, default:'/images/Users/default_user.png'},
+    OTP : {type:String},
+    Is_Verified : {type:Boolean, default:false}
+},
+    {timestamps:true}
+);
+
+module.exports = mongoose.model('Visitor', Visitor);
